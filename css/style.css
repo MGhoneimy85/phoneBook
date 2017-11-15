@@ -1,0 +1,115 @@
+html {
+  height: 100%; }
+
+body, input[type="submit"] {
+  font-family: Tahoma;
+  background-image: linear-gradient(-49deg, #d1209b 0%, #401e7f 100%); }
+
+h1 {
+  font-size: 1.2em;
+  text-align: center;
+  color: #83208c; }
+
+h2 {
+  font-size: 3.2em;
+  text-align: center;
+  color: #fafafa;
+  font-style: italic; }
+
+.text-center {
+  text-align: center; }
+
+.danger {
+  color: #e51b1b; }
+
+.delete-btn {
+  background-color: #e51b1b;
+  color: #fff;
+  cursor: pointer; }
+
+.hide {
+  display: none; }
+
+.tab {
+  background: #fafafa;
+  padding: 1em;
+  width: 50%;
+  margin: -6px auto 0;
+  max-width: 50%;
+  border-radius: 5px;
+  display: none; }
+
+.tab.active {
+  display: block; }
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1em;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border: 1px #ccc solid;
+  border-radius: 5px; }
+
+input.selected {
+  border: 1px #e51b1b solid; }
+
+input[type="submit"] {
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer; }
+
+input:focus {
+  outline: none; }
+
+input::after {
+  width: 100%;
+  height: 10px;
+  background: red; }
+
+.results-container {
+  margin: 20px 0; }
+
+.nav-list {
+  width: 50%;
+  max-width: 50%;
+  text-align: center;
+  margin: auto;
+  padding: 0; }
+  .nav-list li {
+    list-style: none;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.7em 1.2em;
+    margin: 0 0.2em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    color: #6d6d6d; }
+  .nav-list li.active {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000; }
+
+#show-all-tab-grid th, #list-tab-grid th {
+  text-align: center;
+  width: 20% !important;
+  color: #83208c; }
+#show-all-tab-grid td, #list-tab-grid td {
+  text-align: center;
+  width: 20% !important;
+  white-space: nowrap; }
+
+.noSearchResults {
+  margin: 20px 0; }
+
+#results-table th {
+  color: #83208c; }
+#results-table td {
+  text-align: center; }
+
+.grid-container {
+  max-height: 300px;
+  overflow: scroll; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<h2>PhoneBook</h2>
+<div id="tabs">
+    <ul class="nav-list">
+        <li id="show-all" class="tab-item" onclick="toggleActiveTab(0)">Contacts List</li>
+        <li id="search" class="tab-item active" onclick="toggleActiveTab(1)" >Search</li>
+        <li id="add-new" class="tab-item" onclick="toggleActiveTab(2)">Add New Contact</li>
+        <li id="remove" class="tab-item" onclick="toggleActiveTab(3)">Remove Contact</li>
+    </ul>
+</div>
+<div id="list-tab" class="tab">
+    <form id="showContactsForm" action="#">
+        <label> How many Contacts per page?</label>
+        <input type="number" max="50" name="conPerPage" required>
+        <br>
+        <label> page number (page number start from 0) </label>
+        <input type="number" name="page" required>
+        <input type="submit"  value="Submit" id="showContactsSubmitBtn"   />
+    </form>
+    <div class="contact-item text-center danger hide" id="list-tab-noContacts">No contacts Found <hr></div>
+    <div class=" hide" id="list-tab-grid">
+        <table width="95%" cellpadding="5" cellspacing="5">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Phone
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <div class="grid-container">
+            <table width="100%" cellpadding="5" cellspacing="5" >
+                <tbody id="list-tab-results">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="search-tab" class="tab active">
+    <h1>Search Contacts</h1>
+    <form id="searchForm" action="#">
+        <div>
+            <label>
+                <input type="text" name="searchInput" id="searchInput" placeholder="Enter name or phone number of contact"/>
+            </label>
+        </div>
+        <input type="submit" value="Submit"/>
+    </form>
+    <div class="results-container hide" id="results-table">
+        <div class="grid-container">
+            <table width="100%" cellpadding="5" cellspacing="5">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Phone
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="noSearchResults danger text-center hide" id="noSearchResults">There are no results for this name or phone number <hr></div>
+</div>
+
+<div id="contact-tab" class="tab">
+    <form id="contact" action="#">
+        <h1>Add a new contact</h1>
+        <div>
+            <label>
+                <input type="text" class="input" required maxlength="100" name="name" id="name" placeholder="ahmed mohamed"/>
+            </label>
+            <label>
+                <input type="text" class="input" required maxlength="11" name="phone" id="phone" placeholder="12-345-6789"/>
+            </label>
+            <label>
+                <input type="text" class="input" required name="email" id="email" placeholder="ahmed@example.com"/>
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="Submit"/>
+        </div>
+    </form>
+</div>
+<div id="show-all-tab" class="tab">
+    <div class="contact-item text-center danger hide" id="show-all-tab-noContacts">No contacts Found <hr></div>
+    <div class=" hide" id="show-all-tab-grid">
+        <table width="95%" cellpadding="5" cellspacing="5">
+            <thead>
+            <tr>
+                <th>
+                    indexID
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+            </thead>
+        </table>
+        <div class="grid-container">
+            <table width="100%" cellpadding="5" cellspacing="5" >
+                <tbody id="show-all-tab-results">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/index.js"></script>
+
+</body>
+</html>
